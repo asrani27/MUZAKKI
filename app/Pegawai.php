@@ -19,4 +19,9 @@ class Pegawai extends Model
     {
         return $this->hasMany(Transaksi::class);
     }
+    
+    public function ibuhamil()
+    {
+        return $this->hasMany(Ibuhamil::class);
+    }
 }

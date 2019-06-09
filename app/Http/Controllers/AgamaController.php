@@ -41,9 +41,14 @@ class AgamaController extends Controller
 
     public function delete($id)
     {
-        $d = Agama::find($id);
-        $d->delete();
-        Alert::success('Muzakki','Berhasil Dihapus');
-        return back();
+        try {
+            $d = Agama::find($id);
+            $d->delete();
+            Alert::success('Muzakki','Berhasil Dihapus');
+            return back();
+          } catch (\Exception $e) {
+            Alert::error('Muzakki','Tidak Bisa Di Hapus Karena terkait dengan Pegawai Dan Peserta');
+            return back();
+        }
     }
 }

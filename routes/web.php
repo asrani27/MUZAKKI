@@ -81,7 +81,25 @@ Route::post('/transaksi/save', 'TransaksiController@store')->name('simpantransak
 Route::post('/transaksi/update/{id}', 'TransaksiController@update')->name('edittransaksi');
 Route::get('/transaksi/delete/{id}', 'TransaksiController@delete');
 
+//Route Ibuhamil
+Route::get('/ibuhamil', 'IbuhamilController@index')->name('ibuhamil');
+Route::get('/ibuhamil/tambah', 'IbuhamilController@add')->name('tambahibuhamil');
+Route::get('/ibuhamil/edit/{id}', 'IbuhamilController@edit');
+Route::post('/ibuhamil/save', 'IbuhamilController@store')->name('simpanibuhamil');
+Route::post('/ibuhamil/update/{id}', 'IbuhamilController@update')->name('editibuhamil');
+Route::get('/ibuhamil/delete/{id}', 'IbuhamilController@delete');
+
+//Route Bayi
+Route::get('/bayi', 'BayiController@index')->name('bayi');
+Route::get('/bayi/tambah', 'BayiController@add')->name('tambahbayi');
+Route::get('/bayi/edit/{id}', 'BayiController@edit');
+Route::post('/bayi/save', 'BayiController@store')->name('simpanbayi');
+Route::post('/bayi/update/{id}', 'BayiController@update')->name('editbayi');
+Route::get('/bayi/delete/{id}', 'BayiController@delete');
+
 //Route Laporan PDF
+Route::get('/laporan', 'LaporanController@index')->name('laporan');
+
 Route::get('/pdf/totalAgenda', 'PdfController@agendaAll')->name('totalAgenda');
 Route::get('/pdf/agendaToday', 'PdfController@agendaToday')->name('agendaToday');
 Route::get('/pdf/agendaMonth', 'PdfController@agendaMonth')->name('agendaMonth');

@@ -18,7 +18,7 @@
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="{{route('totalAgenda')}}" class="small-box-footer">Print PDF <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{route('peserta')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -33,7 +33,7 @@
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="{{route('agendaToday')}}" class="small-box-footer">Print PDF <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{route('ibuhamil')}}" class="small-box-footer">More Info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -48,7 +48,7 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-          <a href="{{route('agendaMonth')}}" class="small-box-footer">Print PDF <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="{{route('bayi')}}" class="small-box-footer">More Info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -63,7 +63,7 @@
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-          <a href="{{route('pdf')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="{{route('laporan')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

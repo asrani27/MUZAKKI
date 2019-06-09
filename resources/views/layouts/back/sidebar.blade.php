@@ -29,11 +29,11 @@
         </a>
         <ul class="treeview-menu">
           <li><a href="{{route('transaksi')}}"><i class="fa fa-circle"></i> Transaksi</a></li>
-          <li><a href=""><i class="fa fa-circle"></i> Ibu Hamil</a></li>
-          <li><a href=""><i class="fa fa-circle"></i> Bayi lahir</a></li>
+          <li><a href="{{route('ibuhamil')}}"><i class="fa fa-circle"></i> Ibu Hamil</a></li>
+          <li><a href="{{route('bayi')}}"><i class="fa fa-circle"></i> Bayi lahir</a></li>
         </ul>
       </li>
-      <li><a href="#"><i class="fa fa-file"></i> Laporan</a></li>
+      <li><a href="{{route('laporan')}}"><i class="fa fa-file"></i> Laporan</a></li>
       <li><a href="{{route('user')}}"><i class="fa fa-users"></i> Account</a></li>
       <li><a href="{{route('logout')}}"><i class="fa fa-close"></i> Logout</a></li>
     </ul>

@@ -41,9 +41,14 @@ class JabatanController extends Controller
 
     public function delete($id)
     {
-        $d = Jabatan::find($id);
-        $d->delete();
-        Alert::success('Muzakki','Berhasil Dihapus');
-        return back();
+        try{
+            $d = Jabatan::find($id);
+            $d->delete();
+            Alert::success('Muzakki','Berhasil Dihapus');
+            return back();
+        } catch (\Exception $e) {
+            Alert::error('Muzakki','Tidak Bisa Di Hapus Karena terkait dengan Pegawai');
+            return back();
+        }
     }
 }

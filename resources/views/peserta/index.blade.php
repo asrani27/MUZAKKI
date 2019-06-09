@@ -30,10 +30,10 @@
               <td>{{$no++}}</td>
               <td>{{$dt->nama_peserta}}</td>
               <td>{{$dt->nama_pasangan}}</td>
-              <td>{{$dt->tgl_lahir}}</td>
+              <td>{{\Carbon\Carbon::parse($dt->tgl_lahir)->format('d M Y')}}</td>
               <td>{{$dt->umur}}</td>
               <td>{{$dt->alamat}}</td>
-              <td>{{$dt->tgl_daftar}}</td>
+              <td>{{\Carbon\Carbon::parse($dt->tgl_daftar)->format('d M Y')}}</td>
               <td>
                 <a href={{url("peserta/edit/{$dt->id}")}} class="btn btn-xs btn-success"><i class="fa fa-edit"></i> </a>
                 <a href={{url("peserta/delete/{$dt->id}")}} class="btn btn-xs btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data Ini..?');"><i class="fa fa-trash"></i> </a>

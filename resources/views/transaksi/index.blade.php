@@ -29,7 +29,7 @@
             <tr>
               <td>{{$no++}}</td>
               <td>{{$dt->no_kw}}</td>
-              <td>{{$dt->tgl}}</td>
+              <td>{{\Carbon\Carbon::parse($dt->tgl)->format('d M Y')}}</td>
               <td>{{$dt->peserta->nama_peserta}}</td>
               <td>{{$dt->pegawai->nama}}</td>
               <td>{{$dt->jenis->nama}}</td>
