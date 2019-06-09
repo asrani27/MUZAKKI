@@ -5,7 +5,7 @@
     @include('layouts.back.head')
 
 </head>
-<body class="hold-transition skin-purple-light sidebar-mini">
+<body class="fixed hold-transition skin-purple-light sidebar-mini">
 <div class="wrapper">
 
     @include('layouts.back.navbar')
