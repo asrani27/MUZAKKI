@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Agenda;
 use Carbon\Carbon;
 use Alert;
+use App\Peserta;
+use App\Ibuhamil;
+use App\Bayi;
 
 class HomeController extends Controller
 {
@@ -26,9 +29,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $today = Carbon::today()->format('Y-m-d');
+        $today    = Carbon::today()->format('Y-m-d');
+        $peserta  = Peserta::all()->count();
+        $ibuhamil = Ibuhamil::all()->count();
+        $bayi     = Bayi::all()->count();
         
-        return view('home');
+        return view('home',compact('peserta','ibuhamil','bayi'));
     }
 
     public function delete($id)

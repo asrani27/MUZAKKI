@@ -1,14 +1,19 @@
 @extends('layouts.back.master')
 
 @section('content')
+<div class="alert alert-success alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+  <h4><i class="icon fa fa-info"></i> SELAMAT DATANG DI APLIKASI DPPKB Amuntai</h4>
+  Silahkan Gunakan Menu Yang ada di sebelah kiri untuk mengelola aplikasi.
+</div>
 <div class="row">
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>45</h3>
+              <h3>{{$peserta}}</h3>
 
-              <p>TOTAL AGENDA</p>
+              <p>JUMLAH PESERTA</p>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
@@ -21,9 +26,9 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-            <h3>56<sup style="font-size: 20px"></sup></h3>
+            <h3>{{$ibuhamil}}<sup style="font-size: 20px"></sup></h3>
 
-              <p>AGENDA HARI INI</p>
+              <p>JUMLAH IBU HAMIL</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -36,9 +41,9 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-            <h3>23</h3>
+            <h3>{{$bayi}}</h3>
 
-              <p>AGENDA BULAN INI</p>
+              <p>JUMLAH BAYI LAHIR</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
@@ -53,7 +58,7 @@
             <div class="inner">
               <h3>Pdf</h3>
 
-              <p>LAPORAN AGENDA</p>
+              <p>LAPORAN</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
@@ -62,31 +67,5 @@
           </div>
         </div>
         <!-- ./col -->
-        
-      </div>
-      <div class="box box-primary">
-                <!-- /.box-header -->
-                <div class="box-body">
-                  <table id="example1" class="table table-bordered table-striped">
-                    <thead>
-                    <tr>
-                      <th>No</th>
-                      <th>Foto</th>
-                      <th>Nama</th>
-                      <th>Tanggal</th>
-                      <th>Jam</th>
-                      <th>Dari</th>
-                      <th>Keperluan</th>
-                      <th>Telp</th>
-                      <th>Aksi</th>
-                    </tr>
-                    </thead>
-                    <?php
-                    $no = 1;
-                    ?>
-                    <tbody>
-                    </tbody>
-                  </table>
-                </div>
-      </div>
+</div>
 @endsection
