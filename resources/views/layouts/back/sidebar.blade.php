@@ -16,9 +16,9 @@
           <span>Master Data</span>
         </a>
         <ul class="treeview-menu">
-          <li><a href=""><i class="fa fa-circle"></i> Agama</a></li>
-          <li><a href=""><i class="fa fa-circle"></i> Jenis</a></li>
-          <li><a href=""><i class="fa fa-circle"></i> Alat</a></li>
+          <li><a href="{{route('agama')}}"><i class="fa fa-circle"></i> Agama</a></li>
+          <li><a href="{{route('jenis')}}"><i class="fa fa-circle"></i> Jenis</a></li>
+          <li><a href="{{route('alat')}}"><i class="fa fa-circle"></i> Alat</a></li>
           <li><a href=""><i class="fa fa-circle"></i>Pegawai</a></li>
           <li><a href=""><i class="fa fa-circle"></i> Jabatan</a></li> </ul>
       </li>

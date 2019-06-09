@@ -24,14 +24,20 @@ class UserController extends Controller
 
     public function store(Request $req)
     {
-        $cek = User::where('email', $req->email)->first();
+        $cek = User::where('username', $req->username)->first();
         if($cek == null)
         {
-            User::create($req->all());
-            Alert::success('Diskominfotik', 'Berhasil Disimpan');
+            $s = new User;
+            $s->name     = $req->name;
+            $s->username = $req->username;
+            $s->email    = $req->username.'@gmail.com';
+            $s->password = bcrypt($req->password);
+            $s->save();
+            
+            Alert::success('Muzakki', 'Berhasil Disimpan');
         }
         else {
-            Alert::error('Diskominfotik', 'Email Sudah Ada');
+            Alert::error('Muzakki', 'Email Sudah Ada');
         }
         return back();
     }
@@ -40,12 +46,12 @@ class UserController extends Controller
     {
         if($id == Auth::user()->id)
         {   
-            Alert::error('Diskominfotik','Tidak Dapat Di Hapus, User Sedang Login');
+            Alert::error('Muzakki','Tidak Dapat Di Hapus, User Sedang Login');
         }
         else {
             $d = User::find($id);
             $d->delete();
-            Alert::success('Diskominfotik','Berhasil Dihapus');
+            Alert::success('Muzakki','Berhasil Dihapus');
         }
         return back();
     }
@@ -56,16 +62,14 @@ class UserController extends Controller
         if($req->password == null)
         {
             $d->name = $req->name;
-            $d->email = $req->email;
             $d->save();
         }
         else {
             $d->name = $req->name;
-            $d->email = $req->email;
             $d->password = $req->password;
             $d->save();
         }
-        Alert::success('Diskominfotik', 'Berhasil DiUpdate');
+        Alert::success('Muzakki', 'Berhasil DiUpdate');
         return back();
     }
 

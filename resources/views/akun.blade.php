@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
   <div class="col-md-6">
-    <button type="button" class="btn bg-purple add-user">Tambah</button><br /><br />
+    <button type="button" class="btn bg-purple add-user"><i class="fa fa-plus"></i> Tambah</button><br /><br />
   </div>
 </div>
       <div class="box box-purple">
@@ -25,13 +25,13 @@
                         <tr>
                         <td>{{$no++}}</td>
                         <td>{{$dt->name}}</td>
-                        <td>{{$dt->email}}</td>
+                        <td>{{$dt->username}}</td>
                         <td>
                             @if($cekData ==1)
-                            <button type="button" class="btn btn-xs btn-success edit-user"  data-id="{{$dt->id}}" data-name="{{$dt->name}}" data-email="{{$dt->email}}"><i class="fa fa-edit"></i> </button>
+                            <button type="button" class="btn btn-xs btn-success edit-user"  data-id="{{$dt->id}}" data-name="{{$dt->name}}" data-username="{{$dt->username}}"><i class="fa fa-edit"></i> </button>
                            
                             @else
-                            <button type="button" class="btn btn-xs btn-success edit-user"  data-id="{{$dt->id}}" data-name="{{$dt->name}}" data-email="{{$dt->email}}"><i class="fa fa-edit"></i> </button>
+                            <button type="button" class="btn btn-xs btn-success edit-user"  data-id="{{$dt->id}}" data-name="{{$dt->name}}" data-username="{{$dt->username}}"><i class="fa fa-edit"></i> </button>
                             <a href={{url("user/delete/{$dt->id}")}} class="btn btn-xs btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data Ini..?');"><i class="fa fa-trash"></i> </a>
                             @endif
                         </td>
@@ -62,18 +62,13 @@
                   <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">username</label>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail3" name="email" placeholder="Email">
+                      <input type="text" class="form-control" id="inputEmail3" name="username" placeholder="username">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
                     <div class="col-sm-10">
                       <input type="password" class="form-control" id="inputPassword3" name="password" placeholder="Password">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                     Note : Username menggunakan email
                     </div>
                   </div>
           </div>
@@ -86,9 +81,9 @@
         <!-- /.modal-content -->
       </div>
       <!-- /.modal-dialog -->
-    </div>
+  </div>
 
-    <div class="modal fade" id="editUser">
+  <div class="modal fade" id="editUser">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header bg-primary">
@@ -109,7 +104,7 @@
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">username</label>
                       <div class="col-sm-10">
-                        <input type="email" class="form-control" id="editemail" name="email" readonly>
+                        <input type="text" class="form-control" id="editusername" name="username" readonly>
                       </div>
                     </div>
                     <div class="form-group">
@@ -120,7 +115,7 @@
                     </div>
                     <div class="form-group">
                       <div class="col-sm-offset-2 col-sm-10">
-                       Note : Username menggunakan email<br />
+                       Note : username tidak bisa diubah <br />
                        Biarkan Pass kosong jika tidak ingin diganti
                       </div>
                     </div>
@@ -134,7 +129,7 @@
           <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
-      </div>
+  </div>
 @endsection
 
 @push('add_js')
@@ -152,7 +147,7 @@ $(document).ready(function() {
   $(document).on('click', '.edit-user', function() {
     $('#idedit').val($(this).data('id'));
     $('#name').val($(this).data('name'));
-    $('#editemail').val($(this).data('email'));
+    $('#editusername').val($(this).data('username'));
     document.getElementById("editpassword").value = "";
     $('#editUser').modal('show');
   });

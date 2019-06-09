@@ -12,13 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('login');
-});
-
-Route::get('/agenda', 'FrontController@index')->name('agenda');
-Route::post('/bukutamu/store', 'FrontController@store')->name('sb');
-
-Route::get('/loginadmin', function () {
     if(Auth::check()) {
         return redirect()->route('home');
     } 
@@ -33,8 +26,26 @@ Route::get('logout', function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home/delete/{id}', 'HomeController@delete');
-Route::get('/home/edit/{id}', 'HomeController@edit');
+
+//Route Agama
+Route::get('/agama', 'AgamaController@index')->name('agama');
+Route::post('/agama/save', 'AgamaController@store')->name('simpanagama');
+Route::post('/agama/update', 'AgamaController@update')->name('editagama');
+Route::get('/agama/delete/{id}', 'AgamaController@delete');
+
+//Route Jenis
+Route::get('/jenis', 'JenisController@index')->name('jenis');
+Route::post('/jenis/save', 'JenisController@store')->name('simpanjenis');
+Route::post('/jenis/update', 'JenisController@update')->name('editjenis');
+Route::get('/jenis/delete/{id}', 'JenisController@delete');
+
+//Route Alat
+Route::get('/alat', 'AlatController@index')->name('alat');
+Route::post('/alat/save', 'AlatController@store')->name('simpanalat');
+Route::post('/alat/update', 'AlatController@update')->name('editalat');
+Route::get('/alat/delete/{id}', 'AlatController@delete');
+
+
 Route::post('/home/update/{id}', 'HomeController@update')->name('updateAgenda');
 Route::get('/user', 'UserController@index')->name('user');
 Route::post('/user/simpan', 'UserController@store')->name('simpanuser');
