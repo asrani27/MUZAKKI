@@ -10,19 +10,22 @@ class Transaksi extends Model
 
     public function peserta()
     {
-        return $this->belongsTo(Transaksi::class);
+        return $this->belongsTo(Peserta::class);
     }
+
     public function pegawai()
     {
-        return $this->belongsTo(Transaksi::class);
+        return $this->belongsTo(Pegawai::class);
     }
+
     public function jenis()
     {
-        return $this->belongsTo(Transaksi::class);
+        return $this->belongsTo(Jenis::class);
     }
+    
     public function alat()
     {
-        return $this->belongsTo(Transaksi::class);
+        return $this->belongsTo(Alat::class);
     }
     
 }

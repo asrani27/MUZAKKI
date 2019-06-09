@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
   <div class="col-md-6">
-    <a href="{{route('tambahpeserta')}}" type="button" class="btn bg-purple"><i class="fa fa-plus"></i> Tambah</a><br /><br />
+    <a href="{{route('tambahtransaksi')}}" type="button" class="btn bg-purple"><i class="fa fa-plus"></i> Tambah</a><br /><br />
   </div>
 </div>
 <div class="box box-purple">
@@ -30,13 +30,13 @@
               <td>{{$no++}}</td>
               <td>{{$dt->no_kw}}</td>
               <td>{{$dt->tgl}}</td>
-              <td>{{$dt->peserta}}</td>
-              <td>{{$dt->pegawai}}</td>
-              <td>{{$dt->jenis}}</td>
-              <td>{{$dt->alat}}</td>
+              <td>{{$dt->peserta->nama_peserta}}</td>
+              <td>{{$dt->pegawai->nama}}</td>
+              <td>{{$dt->jenis->nama}}</td>
+              <td>{{$dt->alat->nama}}</td>
               <td>
-                <a href={{url("peserta/edit/{$dt->id}")}} class="btn btn-xs btn-success"><i class="fa fa-edit"></i> </a>
-                <a href={{url("peserta/delete/{$dt->id}")}} class="btn btn-xs btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data Ini..?');"><i class="fa fa-trash"></i> </a>
+                <a href={{url("transaksi/edit/{$dt->id}")}} class="btn btn-xs btn-success"><i class="fa fa-edit"></i> </a>
+                <a href={{url("transaksi/delete/{$dt->id}")}} class="btn btn-xs btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data Ini..?');"><i class="fa fa-trash"></i> </a>
               </td>
             </tr>
           @endforeach

@@ -78,7 +78,7 @@ class PegawaiController extends Controller
     
     public function delete($id)
     {
-        $d = Pegaawai::find($id);
+        $d = Pegawai::find($id);
         $d->delete();
         Alert::success('Muzakki','Berhasil Dihapus');
         return back();
