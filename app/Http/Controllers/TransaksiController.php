@@ -25,8 +25,16 @@ class TransaksiController extends Controller
         $pegawai = Pegawai::all();
         $jenis = Jenis::all();
         $alat = alat::all();
-        
-        return view('transaksi.tambah',compact('peserta', 'pegawai', 'jenis', 'alat'));
+        $data = Transaksi::all();
+        $cek = count($data);
+        if($cek == 0)
+        {
+            $no_kw = 1;
+        }
+        else {
+            $no_kw = $data->last()->id + 1;
+        }
+        return view('transaksi.tambah',compact('peserta', 'pegawai', 'jenis', 'alat','no_kw'));
     }
 
     public function edit($id)
