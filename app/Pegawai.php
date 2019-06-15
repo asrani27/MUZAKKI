@@ -24,4 +24,9 @@ class Pegawai extends Model
     {
         return $this->hasMany(Ibuhamil::class);
     }
+
+    public function penyuluhan()
+    {
+        return $this->hasMany(Penyuluhan::class);
+    }
 }

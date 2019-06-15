@@ -113,6 +113,23 @@
                 </div>
             </div>
           </div>
+          <div class="form-group">
+              <label class="col-sm-2 control-label">Status Pegawai</label>
+              <div class="col-sm-10">
+                <select class="form-control select2" style="width: 100%;" name="status">
+                  @if($data->status == null)
+                    <option value="pns" selected>PNS</option>
+                    <option value="honor">Honorer</option>
+                  @elseif($data->status == 'pns')
+                    <option value="pns" selected>PNS</option>
+                    <option value="honor">Honorer</option>
+                  @elseif($data->status == 'honor')
+                    <option value="pns" >PNS</option>
+                    <option value="honor" selected>Honorer</option>
+                  @endif
+                </select>
+              </div>
+          </div>
           <!-- /.box-body -->
           <div class="box-footer">
             <button type="submit" class="btn btn-sm btn-primary">Update</button>

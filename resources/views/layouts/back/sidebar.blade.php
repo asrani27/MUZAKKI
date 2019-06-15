@@ -17,6 +17,7 @@
         </a>
         <ul class="treeview-menu">
           <li><a href="{{route('agama')}}"><i class="fa fa-circle"></i> Agama</a></li>
+          <li><a href="{{route('kecamatan')}}"><i class="fa fa-circle"></i> Kecamatan</a></li>
           <li><a href="{{route('jenis')}}"><i class="fa fa-circle"></i> Jenis</a></li>
           <li><a href="{{route('alat')}}"><i class="fa fa-circle"></i> Alat</a></li>
           <li><a href="{{route('pegawai')}}"><i class="fa fa-circle"></i>Pegawai</a></li>
@@ -31,12 +32,13 @@
           <li><a href="{{route('transaksi')}}"><i class="fa fa-circle"></i> Transaksi</a></li>
           <li><a href="{{route('ibuhamil')}}"><i class="fa fa-circle"></i> Ibu Hamil</a></li>
           <li><a href="{{route('bayi')}}"><i class="fa fa-circle"></i> Bayi lahir</a></li>
+          <li><a href="{{route('penyuluhan')}}"><i class="fa fa-circle"></i> Penyuluhan</a></li>
         </ul>
       </li>
       <li><a href="{{route('laporan')}}"><i class="fa fa-file"></i> Laporan</a></li>
-      <li><a href="{{route('user')}}"><i class="fa fa-users"></i> Account</a></li>
+      <li><a href="{{route('user')}}"><i class="fa fa-user"></i> Account</a></li>
       <li><a href="{{route('logout')}}"><i class="fa fa-close"></i> Logout</a></li>
     </ul>
-  </section>
+  </section> 
   <!-- /.sidebar -->
 </aside>

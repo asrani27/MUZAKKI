@@ -99,6 +99,15 @@
                 <input type="text" class="form-control" name="telp" required onkeypress="return hanyaAngka(event)">
                 </div>
             </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Status Pegawai</label>
+                <div class="col-sm-10">
+                  <select class="form-control select2" style="width: 100%;" name="status">
+                          <option value="pns">PNS</option>
+                          <option value="honor">Honorer</option>
+                  </select>
+                </div>
+            </div>
           </div>
           <!-- /.box-body -->
           <div class="box-footer">

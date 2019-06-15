@@ -40,6 +40,7 @@ class PegawaiController extends Controller
             $s->jabatan_id   = $req->jabatan_id;
             $s->alamat       = $req->alamat;
             $s->telp         = $req->telp;
+            $s->status       = $req->status;
             $s->save();
             Alert::Success('Muzakki', 'Berhasil Disimpan');
         }
@@ -70,6 +71,7 @@ class PegawaiController extends Controller
             $s->jabatan_id   = $req->jabatan_id;
             $s->alamat       = $req->alamat;
             $s->telp         = $req->telp;
+            $s->status       = $req->status;
             $s->save();
             Alert::Success('Muzakki', 'Berhasil Di Update');
         

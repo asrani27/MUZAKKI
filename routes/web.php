@@ -33,6 +33,12 @@ Route::post('/agama/save', 'AgamaController@store')->name('simpanagama');
 Route::post('/agama/update', 'AgamaController@update')->name('editagama');
 Route::get('/agama/delete/{id}', 'AgamaController@delete');
 
+//Route Kecamatan
+Route::get('/kecamatan', 'KecamatanController@index')->name('kecamatan');
+Route::post('/kecamatan/save', 'KecamatanController@store')->name('simpankecamatan');
+Route::post('/kecamatan/update', 'KecamatanController@update')->name('editkecamatan');
+Route::get('/kecamatan/delete/{id}', 'KecamatanController@delete');
+
 //Route Jenis
 Route::get('/jenis', 'JenisController@index')->name('jenis');
 Route::post('/jenis/save', 'JenisController@store')->name('simpanjenis');
@@ -80,6 +86,14 @@ Route::get('/transaksi/edit/{id}', 'TransaksiController@edit');
 Route::post('/transaksi/save', 'TransaksiController@store')->name('simpantransaksi');
 Route::post('/transaksi/update/{id}', 'TransaksiController@update')->name('edittransaksi');
 Route::get('/transaksi/delete/{id}', 'TransaksiController@delete');
+
+//Route Penyuluhan
+Route::get('/penyuluhan', 'PenyuluhanController@index')->name('penyuluhan');
+Route::get('/penyuluhan/tambah', 'PenyuluhanController@add')->name('tambahpenyuluhan');
+Route::get('/penyuluhan/edit/{id}', 'PenyuluhanController@edit');
+Route::post('/penyuluhan/save', 'PenyuluhanController@store')->name('simpanpenyuluhan');
+Route::post('/penyuluhan/update/{id}', 'PenyuluhanController@update')->name('editpenyuluhan');
+Route::get('/penyuluhan/delete/{id}', 'PenyuluhanController@delete');
 
 //Route Ibuhamil
 Route::get('/ibuhamil', 'IbuhamilController@index')->name('ibuhamil');
