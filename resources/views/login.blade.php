@@ -60,7 +60,7 @@
     <div class="row">
     </div>
     <center><img class="" src="{{url('LTE/logo.png')}}">
-        <h2 class="widget-user-username"><b>DPPKB Muzaki</b></h2>
+        <h2 class="widget-user-username"><b>DPPKB</b></h2>
         <h4 class="widget-user-desc"><b>Amuntai</b></h4></center>
     <div class="row">
         <div class="col-md-4">

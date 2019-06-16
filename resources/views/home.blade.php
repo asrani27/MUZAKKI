@@ -3,7 +3,9 @@
 @section('content')
 <div class="alert alert-success alert-dismissible">
   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-  <h4><i class="icon fa fa-info"></i> SELAMAT DATANG DI APLIKASI DPPKB Amuntai</h4>
+  <h4>
+    {{-- <i class="icon fa fa-info"></i>  --}}
+    SELAMAT DATANG DI APLIKASI DPPKB Amuntai</h4>
   Silahkan Gunakan Menu Yang ada di sebelah kiri untuk mengelola aplikasi.
 </div>
 <div class="row">
