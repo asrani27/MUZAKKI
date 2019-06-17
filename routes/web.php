@@ -111,6 +111,19 @@ Route::post('/bayi/save', 'BayiController@store')->name('simpanbayi');
 Route::post('/bayi/update/{id}', 'BayiController@update')->name('editbayi');
 Route::get('/bayi/delete/{id}', 'BayiController@delete');
 
+// Route Untuk Print
+Route::get('/print/pegawai', 'PrintController@pegawai');
+Route::get('/print/peserta', 'PrintController@peserta');
+Route::get('/print/alat', 'PrintController@alat');
+Route::get('/print/jenis', 'PrintController@jenis');
+Route::get('/print/ibuhamil', 'PrintController@ibuhamil');
+Route::get('/print/transaksi', 'PrintController@transaksi');
+Route::get('/print/bayilahir', 'PrintController@bayilahir');
+Route::get('/print/kartukb', 'PrintController@kartukb');
+Route::get('/print/penyuluhan', 'PrintController@penyuluhan');
+Route::get('/print/pegawaikec', 'PrintController@pegawaikec');
+Route::post('/print/cetakkartu', 'PrintController@cetakkartu')->name('cetakkartu');
+
 //Route Laporan PDF
 Route::get('/laporan', 'LaporanController@index')->name('laporan');
 

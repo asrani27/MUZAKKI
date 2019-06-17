@@ -5,8 +5,6 @@
 @endpush
 
 @section('content')
-<form class="form-horizontal">
-
   <!-- /.box- ORGANISASI -->
   <div class="box box-solid">
     <div class="box-header bg-red-gradient">
@@ -18,7 +16,7 @@
     </div>
         <!-- /.box-header -->
     <div class="box-body">
-        <a href=# class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a> 
+        <a href="{{url('/print/pegawai')}}" target="_blank" class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a> 
     </div>
   </div>
 
@@ -33,7 +31,7 @@
       </div>
           <!-- /.box-header -->
       <div class="box-body">
-        <a href=# class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a> 
+        <a href="{{url('/print/peserta')}}" target="_blank" class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a> 
       </div>  
   </div>
   
@@ -48,7 +46,7 @@
     </div>
             <!-- /.box-header -->
     <div class="box-body">
-        <a href=# class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a>      
+        <a href="{{url('/print/alat')}}" target="_blank" class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a>      
     </div>  
   </div> 
 
@@ -63,7 +61,7 @@
     </div>
             <!-- /.box-header -->
     <div class="box-body">
-        <a href=# class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a>      
+        <a href="{{url('/print/jenis')}}" target="_blank" class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a>      
     </div>  
   </div>
 
@@ -78,7 +76,7 @@
     </div>
             <!-- /.box-header -->
     <div class="box-body">
-        <a href=# class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a>  
+        <a href="{{url('/print/ibuhamil')}}" target="_blank" class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a>  
     </div>  
   </div>
 
@@ -93,7 +91,7 @@
     </div>
         <!-- /.box-header -->
     <div class="box-body">
-        <a href=# class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a> 
+        <a href="{{url('/print/transaksi')}}" target="_blank" class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a> 
     </div>  
   </div>
 
@@ -108,7 +106,7 @@
     </div>
         <!-- /.box-header -->
     <div class="box-body">
-        <a href=# class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a> 
+        <a href="{{url('/print/bayilahir')}}" target="_blank" class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a> 
     </div>  
   </div>
 
@@ -123,7 +121,22 @@
       </div>
           <!-- /.box-header -->
       <div class="box-body">
-        <a href=# class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a> 
+          <form class="form-horizontal" action="{{route('cetakkartu')}}" method="POST">
+              {{ csrf_field() }}
+          <div class="form-group">
+              <label class="col-sm-2 control-label">Pilih Peserta</label>
+              <div class="col-sm-8">
+                <select class="form-control select2" style="width: 100%;" name="peserta_id">
+                  @foreach ($peserta as $p)
+                    <option value="{{$p->id}}">{{$p->nama_peserta}}</option>
+                  @endforeach
+                </select>
+              </div>
+              <div class="col-sm-2">   
+                <button type="submit" target="_blank" class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </button> 
+              </div>
+          </div>
+          </form>
       </div>  
   </div>
   
@@ -138,7 +151,7 @@
     </div>
             <!-- /.box-header -->
     <div class="box-body">
-        <a href=# class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a>      
+        <a href="{{url('/print/penyuluhan')}}" target="_blank" class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a>      
     </div>  
   </div> 
 
@@ -153,10 +166,9 @@
     </div>
             <!-- /.box-header -->
     <div class="box-body">
-        <a href=# class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a>      
+        <a href="{{url('/print/pegawaikec')}}" target="_blank" class="btn btn-sm bg-purple"><i class="fa fa-print"></i> PRINT </a>      
     </div>  
   </div>  
-</form>
 @endsection
 
 @push('add_js')
