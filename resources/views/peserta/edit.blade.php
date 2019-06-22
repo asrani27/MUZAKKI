@@ -20,7 +20,15 @@
 <form class="form-horizontal" action="{{route('editpeserta', $data->id)}}" method="POST">
             {{ csrf_field() }}
           <div class="box-body">
-            <br />
+            <br />   
+            
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Kode Peserta</label>
+              <div class="col-sm-10">
+              <input type="text" class="form-control" name="kode_peserta" value="{{$data->kode}}" readonly>
+              </div>
+            </div>
+
             <div class="form-group">
               <label class="col-sm-2 control-label">Nama Peserta</label>
               <div class="col-sm-10">

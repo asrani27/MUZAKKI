@@ -12,6 +12,7 @@
       <thead>
         <tr>
           <th>No</th>
+          <th>Kode</th>
           <th>Nama Peserta</th>
           <th>Nama Pasangan</th>
           <th>Tgl Lahir</th>
@@ -28,6 +29,7 @@
           @foreach ($data as $dt)
             <tr>
               <td>{{$no++}}</td>
+              <td>{{$dt->kode_peserta}}</td>
               <td>{{$dt->nama_peserta}}</td>
               <td>{{$dt->nama_pasangan}}</td>
               <td>{{\Carbon\Carbon::parse($dt->tgl_lahir)->format('d M Y')}}</td>

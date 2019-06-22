@@ -49,6 +49,7 @@
 <table align="left" cellpadding="3" cellspacing="0" class="auto-style2" style="width: 100%">
 	<tr>
 		<td class="auto-style3"><strong>No</strong></td>
+		<td class="auto-style3"><strong>Kode</strong></td>
 		<td class="auto-style3"><strong>Nama Peserta</strong></td>
 		<td class="auto-style3"><strong>Nama Pasangan</strong></td>
 		<td class="auto-style3"><strong>Alamat</strong></td>
@@ -62,6 +63,7 @@
 	@foreach ($data as $item)
 	<tr>
 		<td class="auto-style7">{{$no++}}</td>
+		<td class="auto-style7">{{$item->kode_peserta}}</td>
 		<td class="auto-style7">{{$item->nama_peserta}}</td>
 		<td class="auto-style7">{{$item->nama_pasangan}}</td>
 		<td class="auto-style7">{{$item->alamat}}</td>

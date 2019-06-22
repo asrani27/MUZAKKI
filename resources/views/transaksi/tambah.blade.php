@@ -24,7 +24,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label">No Kwitansi</label>
               <div class="col-sm-10">
-              <input type="text" class="form-control" name="no_kw" value="{{$no_kw}}" readonly>
+              <input type="text" class="form-control" name="no_kw" value="KW0{{$no_kw}}" readonly>
               </div>
             </div>
 

@@ -19,7 +19,16 @@ class PesertaController extends Controller
     public function add()
     {
         $agama = Agama::all();
-        return view('peserta.tambah',compact('agama'));
+        $data = Peserta::all();
+        $cek = count($data);
+        if($cek == 0)
+        {
+            $kode_peserta = 1;
+        }
+        else {
+            $kode_peserta = $data->last()->id + 1;
+        }
+        return view('peserta.tambah',compact('agama','kode_peserta'));
     }
 
     public function store(Request $req)
@@ -28,6 +37,7 @@ class PesertaController extends Controller
             $tgl_daftar = Carbon::parse($req->tgl_daftar)->format('Y-m-d');
             
             $s = new Peserta;
+            $s->kode_peserta   = $req->kode_peserta;
             $s->nama_peserta   = $req->nama_peserta;
             $s->nama_pasangan  = $req->nama_pasangan;
             $s->tgl_lahir      = $tgl_lahir;
@@ -47,7 +57,18 @@ class PesertaController extends Controller
     public function edit($id)
     {
         $agama = Agama::all();
-        $data = Peserta::find($id);
+        $dat = Peserta::where('id',$id)->get();
+        $data = $dat->map(function($item){
+            if($item->kode_peserta == null)
+            {
+                $item->kode = '20190'.$item->id;
+            }
+            else
+            {
+                $item->kode = $item->kode_peserta;
+            }
+            return $item;
+        })->first();
         return view('peserta.edit',compact('data','agama'));
     }
 
@@ -56,6 +77,7 @@ class PesertaController extends Controller
         $tgl_lahir = Carbon::parse($req->tgl_lahir)->format('Y-m-d');
         $tgl_daftar = Carbon::parse($req->tgl_daftar)->format('Y-m-d');
             $s = Peserta::find($id);
+            $s->kode_peserta   = $req->kode_peserta;
             $s->nama_peserta   = $req->nama_peserta;
             $s->nama_pasangan  = $req->nama_pasangan;
             $s->tgl_lahir      = $tgl_lahir;
