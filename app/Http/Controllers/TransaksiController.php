@@ -39,7 +39,17 @@ class TransaksiController extends Controller
 
     public function edit($id)
     {
-        $data = Transaksi::find($id);
+        $dat = Transaksi::where('id',$id)->get();
+        $data = $dat->map(function($item){
+            if(strlen($item->no_kw) == 1)
+            {
+                $item->no_kw2 = 'KW0'.$item->no_kw;
+            }
+            else {
+                $item->no_kw2 = $item->no_kw;
+            }
+            return $item;
+        })->first();
         $peserta = Peserta::all();
         $pegawai = Pegawai::all();
         $jenis = Jenis::all();
