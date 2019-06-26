@@ -59,7 +59,7 @@
                 <div class="col-sm-10">
                   <select class="form-control select2" style="width: 100%;" name="jkel">
                           <option value="L">Laki-laki</option>
-                          <option value="P">Peremuan</option>
+                          <option value="P">Perempuan</option>
                   </select>
                 </div>
             </div>

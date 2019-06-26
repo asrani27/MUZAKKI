@@ -68,10 +68,10 @@
                   <select class="form-control select2" style="width: 100%;" name="jkel">
                         @if($data->jkel == 'L')
                             <option value="L" selected>Laki-laki</option>
-                            <option value="P">Peremuan</option>
+                            <option value="P">Perempuan</option>
                         @else
                             <option value="L">Laki-laki</option>
-                            <option value="P" selected>Peremuan</option>
+                            <option value="P" selected>Perempuan</option>
                         @endif
                   </select>
                 </div>
