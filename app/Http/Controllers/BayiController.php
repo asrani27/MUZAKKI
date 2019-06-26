@@ -51,7 +51,7 @@ class BayiController extends Controller
     public function update(Request $req, $id)
     {
             $tgl = Carbon::parse($req->tgl_lahir)->format('Y-m-d');
-        
+            //dd($tgl);
             $s = Bayi::find($id);
             $s->tanggal         = $tgl;
             $s->hari            = $req->hari;

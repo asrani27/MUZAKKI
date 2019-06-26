@@ -25,7 +25,7 @@
                         <tr>
                         <td>{{$no++}}</td>
                         <td>{{$dt->nama}}</td>
-                        <td>{{$dt->harga}}</td>
+                        <td>Rp. {{format_rupiah($dt->harga)}}</td>
                         <td>
                             <button type="button" class="btn btn-xs btn-success edit-jenis"  data-id="{{$dt->id}}" data-nama="{{$dt->nama}}" data-harga="{{$dt->harga}}"><i class="fa fa-edit"></i> </button>
                             <a href={{url("jenis/delete/{$dt->id}")}} class="btn btn-xs btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data Ini..?');"><i class="fa fa-trash"></i> </a>

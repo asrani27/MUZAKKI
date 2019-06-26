@@ -143,7 +143,15 @@
             <div class="form-group">
                 <label class="col-sm-2 control-label">Jenis Lahir</label>
                 <div class="col-sm-10">
-                <input type="text" class="form-control" name="jenis_lahir" required  value="{{$data->jenis_lahir}}">
+                  <select class="form-control select2" style="width: 100%;" name="jenis_lahir" required>
+                          @if($data->jenis_lahir == 'Tunggal')
+                            <option value="Tunggal" selected>Tunggal</option>
+                            <option value="Kembar">Kembar</option>
+                          @else  
+                            <option value="Tunggal">Tunggal</option>
+                            <option value="Kembar"selected>Kembar</option>
+                          @endif
+                  </select>
                 </div>
             </div>
             <div class="form-group">

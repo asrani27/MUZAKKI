@@ -30,7 +30,7 @@
           @foreach ($data as $dt)
             <tr>
               <td>{{$no++}}</td>
-              <td>{{\Carbon\Carbon::parse($dt->tgl_lahir)->format('d M Y')}}</td>
+              <td>{{\Carbon\Carbon::parse($dt->tanggal)->format('d M Y')}}</td>
               <td>{{$dt->hari}}</td>
               <td>{{$dt->waktu}}</td>
               <td>{{$dt->tempat}}</td>
