@@ -36,7 +36,7 @@
 			<tr>
 				<td>Nama Suami/Istri</td>
 				<td>:</td>
-				<td>{{$data->nama_peserta}}</td>
+				<td>{{$data->nama_pasangan}}</td>
 			</tr>
 			<tr>
 				<td>Tanggal Lahir</td>
