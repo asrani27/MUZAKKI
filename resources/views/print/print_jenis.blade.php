@@ -59,7 +59,7 @@
 	<tr>
 		<td class="auto-style7">{{$no++}}</td>
 		<td class="auto-style7">{{$item->nama}}</td>
-		<td class="auto-style7">{{$item->harga}}</td>
+		<td class="auto-style7">Rp. {{format_rupiah($item->harga)}}</td>
 	</tr>
 	@endforeach
 	

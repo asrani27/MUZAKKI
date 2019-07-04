@@ -27,11 +27,29 @@
 		<td class="auto-style1"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<span class="auto-style3">KARTU PESERTA KB</span><br />
 		<br />
-		</strong>Nama<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </strong>:&nbsp; {{$data->nama_peserta}}<br />
-		Nama Suami/Istri&nbsp; :&nbsp; {{$data->nama_pasangan}}<br />
-		Tanggal Lahir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp; {{\Carbon\Carbon::parse($data->tgl_lahir)->format('d M Y')}}<br />
-		Alamat Peserta&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp; {{$data->alamat}}<br />
+		<table>
+			<tr>
+				<td>Nama</td>
+				<td>:</td>
+				<td>{{$data->nama_peserta}}</td>
+			</tr>
+			<tr>
+				<td>Nama Suami/Istri</td>
+				<td>:</td>
+				<td>{{$data->nama_peserta}}</td>
+			</tr>
+			<tr>
+				<td>Tanggal Lahir</td>
+				<td>:</td>
+				<td>{{\Carbon\Carbon::parse($data->tgl_lahir)->format('d M Y')}}</td>
+			</tr>
+			<tr>
+				<td>Alamat Peserta</td>
+				<td>:</td>
+				<td>{{$data->alamat}}</td>
+			</tr>
+		</table>
+		
 		<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
     Amuntai, {{\Carbon\Carbon::today()->format('d M Y')}}<br />
