@@ -27,7 +27,7 @@
                         <td>{{$dt->nama}}</td>
                         <td>{{$dt->jumlah}}</td>
                         <td>
-                            <button type="button" class="btn btn-xs btn-success edit-alat"  data-id="{{$dt->id}}" data-nama="{{$dt->nama}}" data-jumlah="{{$dt->jumlah}}"><i class="fa fa-edit"></i> </button>
+                            <button type="button" class="btn btn-xs btn-success edit-alat"  data-id="{{$dt->id}}" data-nama="{{$dt->nama}}"  data-pt="{{$dt->pt}}"  data-satuan="{{$dt->satuan}}"  data-jenis_id="{{$dt->jenis_id}}" data-jumlah="{{$dt->jumlah}}"><i class="fa fa-edit"></i> </button>
                             <a href={{url("alat/delete/{$dt->id}")}} class="btn btn-xs btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data Ini..?');"><i class="fa fa-trash"></i> </a>
                         </td>
                         </tr>
@@ -52,6 +52,28 @@
                       <label class="col-sm-3 control-label">Nama Alat</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" id="addnama" name="nama">
+                      </div>
+                  </div> 
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">Jenis</label>
+                    <div class="col-sm-9">
+                      <select id="jenis_id" class="form-control select2" style="width: 100%;" name="jenis_id" required>
+                        @foreach($jenis as $j)
+                        <option value="{{$j->id}}">{{$j->nama}}</option>
+                        @endforeach
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-3 control-label">Satuan</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="addsatuan" name="satuan">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-3 control-label">Nama PT</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="addpt" name="pt">
                       </div>
                   </div>
                   <div class="form-group">
@@ -84,12 +106,34 @@
                 <form class="form-horizontal" method="post" action={{route('editalat')}}>
                     {{ csrf_field() }}
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">Nama Jenis</label>
+                        <label class="col-sm-3 control-label">Nama Alat</label>
                         <div class="col-sm-9">     
                           <input type="hidden" class="form-control" id="idedit" name="idedit">
                           <input type="text" class="form-control" id="nama" name="nama">
                         </div>
                     </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">Jenis</label>
+                    <div class="col-sm-9">
+                      <select id="jenis_id" class="form-control select2" style="width: 100%;" name="jenis_id" required>
+                        @foreach($jenis as $j)
+                        <option value="{{$j->id}}">{{$j->nama}}</option>
+                        @endforeach
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-3 control-label">Satuan</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="editsatuan" name="satuan">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-3 control-label">Nama PT</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="editpt" name="pt">
+                      </div>
+                  </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">Jumlah</label>
                         <div class="col-sm-9">     
@@ -133,6 +177,8 @@ $(document).ready(function() {
   $(document).on('click', '.edit-alat', function() {
     $('#idedit').val($(this).data('id'));
     $('#nama').val($(this).data('nama'));
+    $('#editsatuan').val($(this).data('satuan'));
+    $('#editpt').val($(this).data('pt'));
     $('#jumlah').val($(this).data('jumlah'));
     $('#editAlat').modal('show');
   });

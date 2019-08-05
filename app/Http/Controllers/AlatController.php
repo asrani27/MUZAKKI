@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Alert;
 use App\Alat;
+use App\Jenis;
 
 class AlatController extends Controller
 {
     public function index()
     {
         $data = Alat::all();
-        return view('alat',compact('data'));
+        $jenis = Jenis::all();
+        return view('alat',compact('data','jenis'));
     }
 
     public function store(Request $req)

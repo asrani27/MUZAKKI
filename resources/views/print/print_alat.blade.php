@@ -50,6 +50,9 @@
 	<tr>
 		<td class="auto-style3"><strong>No</strong></td>
 		<td class="auto-style3"><strong>Nama</strong></td>
+		<td class="auto-style3"><strong>Jenis</strong></td>
+		<td class="auto-style3"><strong>Satuan</strong></td>
+		<td class="auto-style3"><strong>PT</strong></td>
 		<td class="auto-style3"><strong>Jumlah</strong></td>
 	</tr>
 	<?php
@@ -59,6 +62,9 @@
 	<tr>
 		<td class="auto-style7">{{$no++}}</td>
 		<td class="auto-style7">{{$item->nama}}</td>
+		<td class="auto-style7">Obat</td>
+		<td class="auto-style7">Botol</td>
+		<td class="auto-style7">PT Kimia Permata</td>
 		<td class="auto-style7">{{$item->jumlah}}</td>
 	</tr>
 	@endforeach
