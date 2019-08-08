@@ -8,6 +8,11 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MENU UTAMA</li>
+      
+      @if(Auth::user()->username == 'pimpinan')
+      <li><a href="{{route('laporan')}}"><i class="fa fa-file"></i> Laporan</a></li>
+      <li><a href="{{route('logout')}}"><i class="fa fa-close"></i> Logout</a></li>
+      @else
       <li><a href="{{route('home')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
       <li><a href="{{route('peserta')}}"><i class="fa fa-users"></i> Peserta</a></li>
       <li class="treeview">
@@ -38,6 +43,7 @@
       <li><a href="{{route('laporan')}}"><i class="fa fa-file"></i> Laporan</a></li>
       <li><a href="{{route('user')}}"><i class="fa fa-user"></i> Account</a></li>
       <li><a href="{{route('logout')}}"><i class="fa fa-close"></i> Logout</a></li>
+      @endif
     </ul>
   </section> 
   <!-- /.sidebar -->

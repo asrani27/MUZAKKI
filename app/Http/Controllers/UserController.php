@@ -66,7 +66,7 @@ class UserController extends Controller
         }
         else {
             $d->name = $req->name;
-            $d->password = $req->password;
+            $d->password = bcrypt($req->password);
             $d->save();
         }
         Alert::success('Muzakki', 'Berhasil DiUpdate');
