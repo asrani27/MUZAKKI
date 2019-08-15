@@ -13,6 +13,8 @@
                     <tr>
                       <th>No</th>
                       <th>Alat</th>
+                      <th>Satuan</th>
+                      <th>PT</th>
                       <th>Jumlah</th>
                       <th>Aksi</th>
                     </tr>
@@ -25,6 +27,8 @@
                         <tr>
                         <td>{{$no++}}</td>
                         <td>{{$dt->nama}}</td>
+                        <td>{{$dt->satuan}}</td>
+                        <td>{{$dt->pt}}</td>
                         <td>{{$dt->jumlah}}</td>
                         <td>
                             <button type="button" class="btn btn-xs btn-success edit-alat"  data-id="{{$dt->id}}" data-nama="{{$dt->nama}}"  data-pt="{{$dt->pt}}"  data-satuan="{{$dt->satuan}}"  data-jenis_id="{{$dt->jenis_id}}" data-jumlah="{{$dt->jumlah}}"><i class="fa fa-edit"></i> </button>
