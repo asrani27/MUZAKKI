@@ -14,4 +14,9 @@ class Jenis extends Model
     {
         return $this->hasMany(Transaksi::class);
     }
+
+    public function alat()
+    {
+        return $this->hasMany(Alat::class);
+    }
 }

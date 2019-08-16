@@ -14,4 +14,9 @@ class Alat extends Model
     {
         return $this->hasMany(Transaksi::class);
     }
+
+    public function jenis()
+    {
+        return $this->belongsTo(Jenis::class);
+    }
 }

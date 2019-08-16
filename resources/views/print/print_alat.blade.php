@@ -62,9 +62,15 @@
 	<tr>
 		<td class="auto-style7">{{$no++}}</td>
 		<td class="auto-style7">{{$item->nama}}</td>
-		<td class="auto-style7">Obat</td>
-		<td class="auto-style7">Botol</td>
-		<td class="auto-style7">PT Kimia Permata</td>
+		<td class="auto-style7">
+		@if($item->jenis == null)
+		-
+		@else
+			{{$item->jenis->nama}}
+		@endif
+		</td>
+		<td class="auto-style7">{{$item->satuan}}</td>
+		<td class="auto-style7">{{$item->pt}}</td>
 		<td class="auto-style7">{{$item->jumlah}}</td>
 	</tr>
 	@endforeach
