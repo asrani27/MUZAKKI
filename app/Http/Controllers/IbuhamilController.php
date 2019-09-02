@@ -38,6 +38,8 @@ class IbuhamilController extends Controller
             $s                  = new Ibuhamil;
             $s->nik             = $req->nik;
             $s->nama            = $req->nama;
+            $s->nama_ayah       = $req->nama_ayah;
+            $s->pekerjaan_ayah  = $req->pekerjaan_ayah;
             $s->tgl_lahir       = $tgl;
             $s->kewarganegaraan = $req->kewarganegaraan;
             $s->alamat          = $req->alamat;
@@ -57,6 +59,8 @@ class IbuhamilController extends Controller
             $s->nik             = $req->nik;
             $s->nama            = $req->nama;
             $s->tgl_lahir       = $tgl;
+            $s->nama_ayah       = $req->nama_ayah;
+            $s->pekerjaan_ayah  = $req->pekerjaan_ayah;
             $s->kewarganegaraan = $req->kewarganegaraan;
             $s->alamat          = $req->alamat;
             $s->pekerjaan       = $req->pekerjaan;

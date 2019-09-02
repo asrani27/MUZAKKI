@@ -13,6 +13,7 @@
         <tr>
           <th>No</th>
           <th>Kode</th>
+          <th>Kepala Keluarga</th>
           <th>Nama Peserta</th>
           <th>Nama Pasangan</th>
           <th>Tgl Lahir</th>
@@ -30,6 +31,7 @@
             <tr>
               <td>{{$no++}}</td>
               <td>{{$dt->kode_peserta}}</td>
+              <td>{{$dt->kepala_keluarga}}</td>
               <td>{{$dt->nama_peserta}}</td>
               <td>{{$dt->nama_pasangan}}</td>
               <td>{{\Carbon\Carbon::parse($dt->tgl_lahir)->format('d M Y')}}</td>

@@ -38,6 +38,7 @@ class PesertaController extends Controller
             
             $s = new Peserta;
             $s->kode_peserta   = $req->kode_peserta;
+            $s->kepala_keluarga= $req->kepala_keluarga;
             $s->nama_peserta   = $req->nama_peserta;
             $s->nama_pasangan  = $req->nama_pasangan;
             $s->tgl_lahir      = $tgl_lahir;
@@ -78,6 +79,7 @@ class PesertaController extends Controller
         $tgl_daftar = Carbon::parse($req->tgl_daftar)->format('Y-m-d');
             $s = Peserta::find($id);
             $s->kode_peserta   = $req->kode_peserta;
+            $s->kepala_keluarga= $req->kepala_keluarga;
             $s->nama_peserta   = $req->nama_peserta;
             $s->nama_pasangan  = $req->nama_pasangan;
             $s->tgl_lahir      = $tgl_lahir;

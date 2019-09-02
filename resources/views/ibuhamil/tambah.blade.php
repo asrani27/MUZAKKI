@@ -62,12 +62,24 @@
             </div>
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Pekerjaan</label>
+                <label class="col-sm-2 control-label">Pekerjaan Ibu</label>
                 <div class="col-sm-10">
                 <input type="text" class="form-control" name="pekerjaan" required>
                 </div>
             </div>
             
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Nama Ayah</label>
+              <div class="col-sm-10">
+              <input type="text" class="form-control" name="nama_ayah" required>
+              </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Pekerjaan Ayah</label>
+                <div class="col-sm-10">
+                <input type="text" class="form-control" name="pekerjaan_ayah" required>
+                </div>
+            </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Nama Pegawai</label>
                 <div class="col-sm-10">

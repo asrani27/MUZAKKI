@@ -135,3 +135,11 @@ Route::post('/pdf/report/print', 'PdfController@printpdf')->name('printpdf');
 
 Route::get('/pdf', 'PdfController@index');
 Route::get('/pdf/test', 'PdfController@test')->name('test');
+
+Route::get('/riwayatpasien', 'RiwayatController@pasien')->name('riwayatpasien');
+Route::get('/riwayatibuhamil', 'RiwayatController@ibuhamil')->name('riwayatibuhamil');
+Route::post('/cekpasien', 'RiwayatController@cekpasien')->name('cekpasien');
+Route::post('/cekibuhamil', 'RiwayatController@cekibuhamil')->name('cekibuhamil');
+
+
+Route::get('/rutin', 'RutinController@index')->name('rutin');

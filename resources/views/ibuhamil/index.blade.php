@@ -13,7 +13,10 @@
         <tr>
           <th>No</th>
           <th>NIK</th>
-          <th>Nama</th>
+          <th>Nama Ibu</th>
+          <th>Nama Ayah</th>
+          <th>Pekerjaan Ibu</th>
+          <th>Pekerjaan Ayah</th>
           <th>Tanggal Lahir</th>
           <th>Kewarganegaraan</th>
           <th>Alamat</th>
@@ -30,6 +33,9 @@
               <td>{{$no++}}</td>
               <td>{{$dt->nik}}</td>
               <td>{{$dt->nama}}</td>
+              <td>{{$dt->nama_ayah}}</td>
+              <td>{{$dt->pekerjaan}}</td>
+              <td>{{$dt->pekerjaan_ayah}}</td>
               <td>{{\Carbon\Carbon::parse($dt->tgl_lahir)->format('d M Y')}}</td>
               <td>{{$dt->kewarganegaraan}}</td>
               <td>{{$dt->alamat}}</td>

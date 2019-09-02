@@ -9,6 +9,7 @@ use Alert;
 use App\Peserta;
 use App\Ibuhamil;
 use App\Bayi;
+use App\Transaksi;
 
 class HomeController extends Controller
 {
@@ -33,8 +34,9 @@ class HomeController extends Controller
         $peserta  = Peserta::all()->count();
         $ibuhamil = Ibuhamil::all()->count();
         $bayi     = Bayi::all()->count();
+        $transaksi= Transaksi::all()->count();
         
-        return view('home',compact('peserta','ibuhamil','bayi'));
+        return view('home',compact('peserta','ibuhamil','bayi','transaksi'));
     }
 
     public function delete($id)
